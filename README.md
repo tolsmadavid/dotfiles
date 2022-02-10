@@ -10,18 +10,18 @@ The gist of it is that we create a bare repo in our home directory (I chose ~/.d
 
 We then hide all other files that have not been explicitly added to the git repo in order to not have to maintain a gitignore for every file added to the home directory. 
 
-'''
+```
 git init --bare $HOME/.dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
-'''
+```
 
 We then can use the alias to commit and push files to the repositry. 
 
-e.g. 'dotfiles add .bashrc'
+e.g. `dotfiles add .bashrc`
   or 
-     'dotfiles commit -m "added .bashrc"
+     `dotfiles commit -m "added .bashrc"`
      
 ## .bashrc
 
