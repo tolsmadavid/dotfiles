@@ -30,3 +30,15 @@ Here are all the custom configurations and aliases in my bash config. Here you w
 ## Awesome
 
 I am just getting started with AwesomeWm. I love the beautiful setups that can be seen on r/unixporn and the flexibility really applealed to me. This section is going to be incomplete for a while, but work will start!
+
+### Awesome Testing
+
+In order to develop the awesome config files before having a complete working setup, we can create an xserver inside an existing window manager. In this case I have been useing KDE Plasma as my desktop enviroment. We can use Xnest to spwan a window, then run awesomeWm inside that window. 
+
+#### Spawn the Xserver window
+
+`Xnest -ac -geometry 1366x768`
+
+#### Start awesomeWm
+
+`DISPLAY=:1 awesome`
